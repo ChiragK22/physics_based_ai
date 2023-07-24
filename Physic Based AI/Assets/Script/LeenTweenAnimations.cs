@@ -8,13 +8,15 @@ public class LeenTweenAnimations : MonoBehaviour
     public GameObject Yellow;
     public float moveTime = 0f;
     public float waitTime = 5f;
+    bool show;
 
     void Start()
     {
-        if (target != null)
+        show = false;
+        if (target != null && show == false)
         {
-            LeanTween.move(target, new Vector3(1f, 0.5f, -6.5f), moveTime).setEase(LeanTweenType.easeInOutQuad);
-            StartCoroutine(StartLeenTween());
+            LeanTween.move(target, new Vector3(1f, -3.5f, -6.5f), moveTime).setEase(LeanTweenType.easeInOutQuad);
+            StartCoroutine(ShowRedBlock());
         }
 
         if (Yellow != null)
@@ -23,10 +25,6 @@ public class LeenTweenAnimations : MonoBehaviour
             StartCoroutine(StartLeenTweenY());
         }
     }
-    //void Update()
-    //{
-    //    StartCoroutine(StartLeenTween());
-    //}
 
     IEnumerator StartLeenTween()
     {
@@ -34,10 +32,18 @@ public class LeenTweenAnimations : MonoBehaviour
         StartLeenTweenMethod();
     }
 
+    IEnumerator ShowRedBlock()
+    {
+        yield return new WaitForSeconds(waitTime);
+        LeanTween.move(target, new Vector3(1f, 0.5f, -6.5f), moveTime).setEase(LeanTweenType.easeInOutQuad);
+        StartCoroutine(StartLeenTween());
+    }
+
     IEnumerator StartLeenTweenY()
     {
         yield return new WaitForSeconds(waitTime);
         StartLeenTweenMethodY();
+       
     }
     void StartLeenTweenMethod()
     {
@@ -46,6 +52,6 @@ public class LeenTweenAnimations : MonoBehaviour
 
     void StartLeenTweenMethodY()
     {
-        LeanTween.move(Yellow, new Vector3(2.5f, 15f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(Yellow, new Vector3(15f, 2f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
     }
 }

@@ -389,8 +389,10 @@
 "Assets/LeanTween/Framework/LTDescr.cs"
 "Assets/LeanTween/Framework/LTDescrOptional.cs"
 "Assets/LeanTween/Framework/LTSeq.cs"
+"Assets/plank.cs"
 "Assets/Script/BalanceTheBall.cs"
 "Assets/Script/BallManager.cs"
+"Assets/Script/GameManager.cs"
 "Assets/Script/LeenTweenAnimations.cs"
 "Assets/Script/LeenTweenAnimations1.cs"
 -langversion:9.0
