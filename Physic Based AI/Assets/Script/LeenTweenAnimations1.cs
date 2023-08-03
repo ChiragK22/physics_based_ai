@@ -15,7 +15,7 @@ public class LeenTweenAnimations1 : MonoBehaviour
     public float YellowWaitPTime1 = 7f;
     
 
-    IEnumerator Start()
+    public void Start()
     {
         if (target != null)
         {
@@ -23,35 +23,33 @@ public class LeenTweenAnimations1 : MonoBehaviour
             StartCoroutine(StartLeenTween());
         }
 
+        //if (Yellow != null)
+        //{
+        //    LeanTween.move(Yellow, new Vector3(2.5f, 14f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
+        //    //StartAni();
+        //    // StartCoroutine(StartLeenTweenY());
+        //    yield return new WaitForSeconds(YellowWaitTime);
+        //    if (cups.instance.empatyCup == "Cup1")
+        //    {
+        //        StartCoroutine(Start1LeenTweenY());
+        //    }
+        //    else if (cups.instance.empatyCup == "Cup2")
+        //    {
+        //        StartCoroutine(Start1LeenTweenY1());
+        //    }
+
+        //}
         if (Yellow != null)
         {
             LeanTween.move(Yellow, new Vector3(2.5f, 14f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
-            //StartAni();
-            // StartCoroutine(StartLeenTweenY());
-            yield return new WaitForSeconds(YellowWaitTime);
-            if (cups.instance.empatyCup == "Cup1")
-            {
-                StartCoroutine(Start1LeenTweenY());
-            }
-            else if (cups.instance.empatyCup == "Cup2")
-            {
-                StartCoroutine(Start1LeenTweenY1());
-            }
-
+            StartCoroutine(StartLeenTweenY());
         }
+
         if (Yellow1 != null)
         {
+            
             LeanTween.move(Yellow1, new Vector3(-1.6f, 14f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
-           // StartCoroutine(StartLeenTweenY());
-            //yield return new WaitForSeconds(YellowWaitTime);
-            if (cups.instance.empatyCup == "Cup1")
-            {
-                StartCoroutine(Start1LeenTweenY());
-            }
-            else if (cups.instance.empatyCup == "Cup2")
-            {
-                StartCoroutine(Start1LeenTweenY1());
-            }
+            StartCoroutine(StartLeenTweenY());
         }
     }
 
@@ -65,23 +63,28 @@ public class LeenTweenAnimations1 : MonoBehaviour
         StartLeenTweenMethodPast();
     }
 
-    IEnumerator Start1LeenTweenY()
-    {
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(StartLeenTweenY());
-    }
-
-    IEnumerator Start1LeenTweenY1()
-    {
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(StartLeenTweenY1());
-    }
-
     IEnumerator StartLeenTweenY()
     { 
         yield return new WaitForSeconds(YellowWaitTime);
         StartLeenTweenMethodY();
         yield return new WaitForSeconds(YellowWaitPTime);
+        if(cups.instance.empatyCup == "Cup1")
+        {
+            StartCoroutine(StartTweenY());
+        }
+        else if (cups.instance.empatyCup == "Cup2")
+        {
+            StartCoroutine(StartLeenTweenY1());
+        }
+        else
+        {
+            yield return new WaitForSeconds(3f);
+            StartLeenTweenMethodYPast1();
+        }
+    }
+
+    IEnumerator StartTweenY()
+    {
         StartLeenTweenMethodYPast();
         yield return new WaitForSeconds(YellowWaitPTime1);
         StartLeenTweenMethodY2();
@@ -92,9 +95,9 @@ public class LeenTweenAnimations1 : MonoBehaviour
 
     IEnumerator StartLeenTweenY1()
     {
-        yield return new WaitForSeconds(YellowWaitTime);
-        StartLeenTweenMethodY();
-        yield return new WaitForSeconds(YellowWaitPTime);
+        //yield return new WaitForSeconds(YellowWaitTime);
+        //StartLeenTweenMethodY();
+        //yield return new WaitForSeconds(YellowWaitPTime);
         StartLeenTweenMethodYPast11();
         yield return new WaitForSeconds(YellowWaitPTime1);
         StartLeenTweenMethodY21();

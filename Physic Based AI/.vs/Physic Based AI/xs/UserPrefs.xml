@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{9A0E540D-E43C-ED8D-2FC9-63FAC861DFF5}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/LeenTweenAnimations1.cs">
     <Files>
+      <File FileName="Assets/Script/LeenTweenAnimations1.cs" Line="82" Column="42" />
       <File FileName="Assets/Script/BalanceTheBall.cs" Line="27" Column="1" />
-      <File FileName="Assets/Script/LeenTweenAnimations.cs" />
-      <File FileName="Assets/Script/BallManager.cs" Line="94" Column="26" />
-      <File FileName="Assets/Script/LeenTweenAnimations1.cs" Line="58" Column="5" />
-      <File FileName="Assets/Script/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/plank.cs" Line="46" Column="1" />
-      <File FileName="Assets/cups.cs" Line="10" Column="19" />
+      <File FileName="Assets/Script/LeenTweenAnimations.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/BallManager.cs" />
+      <File FileName="Assets/Script/GameManager.cs" />
+      <File FileName="Assets/plank.cs" />
+      <File FileName="Assets/cups.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="91154634-d0e3-401e-a011-93e4cee20a5f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d258f13a-0348-48da-bf1c-10a5a1d891fe" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
