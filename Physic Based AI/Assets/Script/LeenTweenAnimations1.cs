@@ -13,8 +13,9 @@ public class LeenTweenAnimations1 : MonoBehaviour
     public float RedwaitPTime = 5f;
     public float YellowWaitPTime = 5f;
     public float YellowWaitPTime1 = 7f;
+    
 
-    void Start()
+    IEnumerator Start()
     {
         if (target != null)
         {
@@ -25,14 +26,36 @@ public class LeenTweenAnimations1 : MonoBehaviour
         if (Yellow != null)
         {
             LeanTween.move(Yellow, new Vector3(2.5f, 14f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
-            StartCoroutine(StartLeenTweenY());
+            //StartAni();
+            // StartCoroutine(StartLeenTweenY());
+            yield return new WaitForSeconds(YellowWaitTime);
+            if (cups.instance.empatyCup == "Cup1")
+            {
+                StartCoroutine(Start1LeenTweenY());
+            }
+            else if (cups.instance.empatyCup == "Cup2")
+            {
+                StartCoroutine(Start1LeenTweenY1());
+            }
+
         }
         if (Yellow1 != null)
         {
             LeanTween.move(Yellow1, new Vector3(-1.6f, 14f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
-            StartCoroutine(StartLeenTweenY());
+           // StartCoroutine(StartLeenTweenY());
+            //yield return new WaitForSeconds(YellowWaitTime);
+            if (cups.instance.empatyCup == "Cup1")
+            {
+                StartCoroutine(Start1LeenTweenY());
+            }
+            else if (cups.instance.empatyCup == "Cup2")
+            {
+                StartCoroutine(Start1LeenTweenY1());
+            }
         }
     }
+
+    
 
     IEnumerator StartLeenTween()
     {
@@ -42,15 +65,39 @@ public class LeenTweenAnimations1 : MonoBehaviour
         StartLeenTweenMethodPast();
     }
 
+    IEnumerator Start1LeenTweenY()
+    {
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(StartLeenTweenY());
+    }
+
+    IEnumerator Start1LeenTweenY1()
+    {
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(StartLeenTweenY1());
+    }
 
     IEnumerator StartLeenTweenY()
-    {
+    { 
         yield return new WaitForSeconds(YellowWaitTime);
         StartLeenTweenMethodY();
         yield return new WaitForSeconds(YellowWaitPTime);
         StartLeenTweenMethodYPast();
         yield return new WaitForSeconds(YellowWaitPTime1);
         StartLeenTweenMethodY2();
+        yield return new WaitForSeconds(YellowWaitPTime);
+        StartLeenTweenMethodYPast1();
+    }
+    
+
+    IEnumerator StartLeenTweenY1()
+    {
+        yield return new WaitForSeconds(YellowWaitTime);
+        StartLeenTweenMethodY();
+        yield return new WaitForSeconds(YellowWaitPTime);
+        StartLeenTweenMethodYPast11();
+        yield return new WaitForSeconds(YellowWaitPTime1);
+        StartLeenTweenMethodY21();
         yield return new WaitForSeconds(YellowWaitPTime);
         StartLeenTweenMethodYPast1();
     }
@@ -78,21 +125,32 @@ public class LeenTweenAnimations1 : MonoBehaviour
     {
         LeanTween.move(Yellow, new Vector3(2.5f, 15f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
         Debug.Log("Yellow up movement");
-
     }
 
-    //Yellow1 up movement
-    void StartLeenTweenMethodYPast1()
+    void StartLeenTweenMethodYPast11()
     {
         LeanTween.move(Yellow1, new Vector3(-1.6f, 15f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
-        LeanTween.move(Yellow, new Vector3(2.5f, 15f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
-        Debug.Log("Yellow1 up movement");
+        Debug.Log("Yellow up movement");
     }
+
 
     //Yellow down movement
     void StartLeenTweenMethodY2()
     {
         LeanTween.move(Yellow, new Vector3(2.5f, 2f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
         Debug.Log("Yellow down movement1");
+    }
+
+    void StartLeenTweenMethodY21()
+    {
+        LeanTween.move(Yellow1, new Vector3(-1.6f, 2f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
+        Debug.Log("Yellow down movement1");
+    }
+    //Yellow1 up movement
+    void StartLeenTweenMethodYPast1()
+    {
+        LeanTween.move(Yellow1, new Vector3(-1.6f, 15f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(Yellow, new Vector3(2.5f, 15f, -4f), moveTime).setEase(LeanTweenType.easeInOutQuad);
+        Debug.Log("Yellow1 up movement");
     }
 }

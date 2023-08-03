@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 452887548}
   - component: {fileID: 452887547}
   - component: {fileID: 452887552}
+  - component: {fileID: 452887553}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -410,6 +411,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 452887547}
   waitTime: 3.5
+  randomForce: 10000
+--- !u!114 &452887553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452887546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7d5ab46c7d74d92a2443c27e21e48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cupsName: 
+  cup: 0
+  empatyCup: 
 --- !u!1 &495897616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,8 +1517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 0}
-  rotationSpeed: 0
+  rotationSpeed: 10
   collisionRadius: 0
+  wait: 3.5
+  sphereObject: {fileID: 0}
 --- !u!54 &1623869638
 Rigidbody:
   m_ObjectHideFlags: 0
