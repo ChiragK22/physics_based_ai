@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{9A0E540D-E43C-ED8D-2FC9-63FAC861DFF5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/LeenTweenAnimations1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/BallManager.cs">
     <Files>
       <File FileName="Assets/Script/LeenTweenAnimations1.cs" Line="82" Column="42" />
-      <File FileName="Assets/Script/BalanceTheBall.cs" Line="27" Column="1" />
-      <File FileName="Assets/Script/LeenTweenAnimations.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/BallManager.cs" />
+      <File FileName="Assets/Script/BalanceTheBall.cs" />
+      <File FileName="Assets/Script/LeenTweenAnimations.cs" />
+      <File FileName="Assets/Script/BallManager.cs" Line="108" Column="15" />
       <File FileName="Assets/Script/GameManager.cs" />
       <File FileName="Assets/plank.cs" />
       <File FileName="Assets/cups.cs" />
@@ -13,10 +13,8 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Physic Based AI" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Script" expanded="True">
-                <Node name="LeenTweenAnimations1.cs" selected="True" />
-              </Node>
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Script" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -25,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d258f13a-0348-48da-bf1c-10a5a1d891fe" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bb4bc508-2600-4808-9738-c4f036fe0aec" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

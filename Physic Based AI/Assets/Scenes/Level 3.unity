@@ -412,6 +412,7 @@ MonoBehaviour:
   rigidbody: {fileID: 452887547}
   waitTime: 3.5
   randomForce: 10000
+  floatRange: 0
 --- !u!114 &452887553
 MonoBehaviour:
   m_ObjectHideFlags: 0

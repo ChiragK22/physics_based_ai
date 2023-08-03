@@ -9,6 +9,8 @@ public class BallManager : MonoBehaviour
     public new Rigidbody rigidbody;
     public float waitTime;
     public float randomForce;
+    [Range(-1f, 1f)]
+    public int floatRange;
 
     void Start()
     {
@@ -83,30 +85,60 @@ public class BallManager : MonoBehaviour
         // Create a list of the three possible values.
        
         // Get a random float between 0 and 1.
-        float randomForce = Random.value;
-        Debug.Log(randomForce);
+        //float randomForce = Random.value;
+
+        //floatRange = Random.value;
+
+        Debug.Log(floatRange);
 
         List<float> possible_values = new List<float>();
         possible_values.Add(-1000f);
         possible_values.Add(0f);
         possible_values.Add(1000f);
 
-        if (randomForce < 0.4f)
+
+        if (floatRange == -1)
         {
             return possible_values[0];
-            Debug.Log("-1000");
+            Debug.Log("Float range 1");
         }
-
-        // If the random force is between 0.4 and 0.6, return 0.
-        else if (randomForce <= 0.6f && randomForce >= 0.4f)
+        else if (floatRange == 0)
         {
             return possible_values[1];
-            Debug.Log("0");
+            Debug.Log("Float range 0 ");
         }
+        else
+        {
+            return possible_values[2];
+        }
+        //else if (randomForce > 0)
+        //{
+        //    return possible_values[2];
+        //    Debug.Log("1000");
+        //}
+        //return possible_values[0];
+        
+        //// Otherwise, return 1000.
+       // return possible_values[1];
+        Debug.Log("Float range 0.5");
+        //Debug.Log("1000");
 
-        // Otherwise, return 1000.
-        return possible_values[2];
-        Debug.Log("1000");
+        //if (randomForce < 0.4f)
+        //{
+        //    return possible_values[0];
+        //    Debug.Log("-1000");
+        //}
+
+        //// If the random force is between 0.4 and 0.6, return 0.
+        //else if (randomForce <= 0.6f && randomForce >= 0.4f)
+        //{
+        //    return possible_values[1];
+        //    Debug.Log("0");
+        //}
+
+        //// Otherwise, return 1000.
+        //return possible_values[2];
+        //Debug.Log("1000");
     }
 
 }
