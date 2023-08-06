@@ -8,9 +8,10 @@ public class BallManager : MonoBehaviour
 {
     public new Rigidbody rigidbody;
     public float waitTime;
-    public float randomForce;
+   // public float randomForce;
     [Range(-1f, 1f)]
     public int floatRange;
+    public string gameObejctName;
 
     void Start()
     {
@@ -47,10 +48,12 @@ public class BallManager : MonoBehaviour
         // If the collision is with the plank, apply a random force to the ball.
         if (collision.gameObject.name == "Seasaw")
         {
+            gameObejctName = gameObject.name;
             Debug.Log("Plank");
             float forceAmount = GetRandomForceDirection();
+            Debug.Log("ForceAmount" + forceAmount);
             rigidbody.AddForce(Vector3.right * forceAmount);
-            Debug.Log(forceAmount);
+           // Debug.Log(forceAmount);
         }
     }
 
@@ -95,12 +98,22 @@ public class BallManager : MonoBehaviour
         possible_values.Add(-1000f);
         possible_values.Add(0f);
         possible_values.Add(1000f);
+        possible_values.Add(-35000f);
+        possible_values.Add(35000f);
+
 
 
         if (floatRange == -1)
         {
-            return possible_values[0];
-            Debug.Log("Float range 1");
+            if(gameObejctName == "Cone")
+            {
+                return possible_values[3];
+                Debug.Log("CONE!S");
+            }
+            else
+            {
+                return possible_values[0];
+            }
         }
         else if (floatRange == 0)
         {
@@ -109,7 +122,16 @@ public class BallManager : MonoBehaviour
         }
         else
         {
-            return possible_values[2];
+            if (gameObejctName == "Cone")
+            {
+                return possible_values[4];
+                Debug.Log("CONE!S");
+            }
+            else
+            {
+                return possible_values[2];
+            }
+            
         }
         //else if (randomForce > 0)
         //{

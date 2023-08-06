@@ -18,7 +18,8 @@ public class plank : MonoBehaviour
 
     private void Start()
     {
-        sphereObject = GameObject.Find("Sphere");
+        sphereObject = GameObject.FindWithTag("ShapeObjects");
+        //GameObject sphereObject = GameObject.FindWithTag(tag);
         StartCoroutine(SphereCollection());
 
         initialPosition = transform.position;
@@ -29,6 +30,7 @@ public class plank : MonoBehaviour
     {
         yield return new WaitForSeconds(wait);
         sphere = sphereObject.transform;
+        Debug.Log(sphere);
     }
 
     void Update()
@@ -36,17 +38,20 @@ public class plank : MonoBehaviour
         // Calculate the direction of the sphere.
         if(sphere != null)
         {
-            sphereDirection = sphere.position - transform.position;
+            //sphereDirection = sphere.position - transform.position;
+            sphereDirection = sphereObject.transform.position - transform.position;
         }
 
         // Calculate the rotation amount.
         rotationAmount = sphereDirection.x * rotationSpeed * Time.deltaTime;
+        //Debug.Log(rotationAmount);
 
         // If the sphere has collided with the plank, start rotating.
-        if (Physics.SphereCast(transform.position, collisionRadius, sphere.position, out RaycastHit hit))
+        if (Physics.SphereCast(transform.position, collisionRadius, sphere.position, out RaycastHit hit) || Physics.Raycast(sphere.position, sphere.forward, 100f))
         {
             isRotating = true;
         }
+
 
         // If the plank is rotating, rotate it.
         if (isRotating)
@@ -58,6 +63,7 @@ public class plank : MonoBehaviour
         {
             transform.Rotate(0, 0, 0);
             sphere = null;
+            Debug.Log("Null");
 
             transform.position = initialPosition;
             transform.rotation = initialRotation;
