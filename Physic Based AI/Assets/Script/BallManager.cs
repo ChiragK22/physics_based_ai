@@ -105,7 +105,7 @@ public class BallManager : MonoBehaviour
 
         if (floatRange == -1)
         {
-            if(gameObejctName == "Cone")
+            if(gameObejctName == "Cone" || gameObejctName == "Hemisphere")
             {
                 return possible_values[3];
                 Debug.Log("CONE!S");
@@ -122,7 +122,7 @@ public class BallManager : MonoBehaviour
         }
         else
         {
-            if (gameObejctName == "Cone")
+            if (gameObejctName == "Cone" || gameObejctName == "Hemisphere")
             {
                 return possible_values[4];
                 Debug.Log("CONE!S");

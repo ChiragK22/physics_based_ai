@@ -807,13 +807,21 @@
       <Project>{3B8A1128-A5BF-6DC2-F4C3-29D72C1B5C39}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AddOns.Editor.csproj">
+      <Project>{44434EA0-C120-AB7E-0A3D-570341D16964}</Project>
+      <Name>Unity.ProBuilder.AddOns.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.csproj">
+      <Project>{EA421D2C-779F-13A4-9455-47EE220183C7}</Project>
+      <Name>Unity.ProBuilder</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
       <Project>{FA93B4B1-C834-9001-A994-231588D910C5}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{D157595B-6910-F496-4B1F-F211CD6BB98D}</Project>
-      <Name>Unity.VisualScripting.Flow</Name>
+    <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
+      <Project>{47036FC7-1F09-8AF3-E85E-52F260B74C80}</Project>
+      <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
       <Project>{8082CB62-D971-ADD3-BC84-4ACB4B2B3BF2}</Project>
@@ -822,6 +830,10 @@
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{8C895E38-3488-3237-C025-EE5F9B2A6ECC}</Project>
       <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
+      <Project>{D157595B-6910-F496-4B1F-F211CD6BB98D}</Project>
+      <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.csproj">
       <Project>{600241DD-9CA3-B8C3-D9D5-0136551F396E}</Project>
@@ -838,6 +850,10 @@
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
       <Project>{45998524-49FB-8BCB-BE51-67788FF07AAF}</Project>
       <Name>Unity.Services.Core.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
+      <Project>{C7208E9C-F133-E8B3-16EB-2C905D346484}</Project>
+      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{AB441AA3-D0DE-90D4-C317-EA0BD0885940}</Project>
@@ -858,22 +874,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{C875B6D9-3696-B09B-E7D9-39FFB9BC56D4}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.csproj">
-      <Project>{EA421D2C-779F-13A4-9455-47EE220183C7}</Project>
-      <Name>Unity.ProBuilder</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.AddOns.Editor.csproj">
-      <Project>{44434EA0-C120-AB7E-0A3D-570341D16964}</Project>
-      <Name>Unity.ProBuilder.AddOns.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
-      <Project>{47036FC7-1F09-8AF3-E85E-52F260B74C80}</Project>
-      <Name>Unity.ProBuilder.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
-      <Project>{C7208E9C-F133-E8B3-16EB-2C905D346484}</Project>
-      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

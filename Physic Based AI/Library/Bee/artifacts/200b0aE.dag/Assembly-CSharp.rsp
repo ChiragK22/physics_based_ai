@@ -360,7 +360,6 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/cups.cs"
 "Assets/LeanTween/Examples/Archived/OldGUIExamplesCS.cs"
 "Assets/LeanTween/Examples/Archived/TestingPunch.cs"
 "Assets/LeanTween/Examples/Archived/TestingRigidbodyCS.cs"
@@ -394,12 +393,14 @@
 "Assets/LeanTween/Framework/LTDescr.cs"
 "Assets/LeanTween/Framework/LTDescrOptional.cs"
 "Assets/LeanTween/Framework/LTSeq.cs"
-"Assets/plank.cs"
 "Assets/Script/BalanceTheBall.cs"
 "Assets/Script/BallManager.cs"
+"Assets/Script/cups.cs"
 "Assets/Script/GameManager.cs"
+"Assets/Script/HalfLogic.cs"
 "Assets/Script/LeenTweenAnimations.cs"
 "Assets/Script/LeenTweenAnimations1.cs"
+"Assets/Script/plank.cs"
 -langversion:9.0
 
 /deterministic
