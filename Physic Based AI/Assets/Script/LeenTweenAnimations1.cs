@@ -54,7 +54,6 @@ public class LeenTweenAnimations1 : MonoBehaviour
     }
 
     
-
     IEnumerator StartLeenTween()
     {
         yield return new WaitForSeconds(RedwaitTime);
@@ -67,8 +66,9 @@ public class LeenTweenAnimations1 : MonoBehaviour
     { 
         yield return new WaitForSeconds(YellowWaitTime);
         StartLeenTweenMethodY();
-        yield return new WaitForSeconds(YellowWaitPTime);
-        if(cups.instance.empatyCup == "Cup1")
+        yield return new WaitForSeconds(2f);
+        yield return new WaitUntil(() => cups.instance.cup == true);
+        if (cups.instance.empatyCup == "Cup1")
         {
             StartCoroutine(StartTweenY());
         }
